@@ -28,7 +28,7 @@ class App extends Component {
           label: "Moisture Level",
           backgroundColor: "rgba(3,176,224,0.4)",
           borderColor: "rgba(3,176,224,1)",
-          data: response.data.map(item => item.level)
+          data: response.data.map(item => item.level / 100)
         }
       ]
     };
