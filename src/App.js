@@ -43,7 +43,7 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <Line data={this.state.data} width={600} height={250} />
+        <Line data={this.state.data} />
       </React.Fragment>
     );
   }
