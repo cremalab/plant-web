@@ -26,16 +26,14 @@ class App extends Component {
       datasets: [
         {
           label: "Moisture Level",
-          fillColor: "rgba(220,220,220,0.2)",
-          strokeColor: "rgba(220,220,220,1)",
-          pointColor: "rgba(220,220,220,1)",
-          pointStrokeColor: "#fff",
-          pointHighlightFill: "#fff",
-          pointHighlightStroke: "rgba(220,220,220,1)",
+          backgroundColor: "rgba(3,176,224,0.4)",
+          borderColor: "rgba(3,176,224,1)",
           data: response.data.map(item => item.level)
         }
       ]
     };
+
+    console.log(finalData);
 
     this.setState({
       data: finalData
