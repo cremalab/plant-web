@@ -43,7 +43,21 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <Line data={this.state.data} />
+        <Line
+          data={this.state.data}
+          options={{
+            scales: {
+              yAxes: [
+                {
+                  ticks: {
+                    max: 10,
+                    min: 0
+                  }
+                }
+              ]
+            }
+          }}
+        />
       </React.Fragment>
     );
   }
