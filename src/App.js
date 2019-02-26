@@ -19,16 +19,34 @@ class App extends Component {
       }
     );
 
+    let filteredData = response.data.filter((item, idx) => {
+      return idx % 1 === 0 && item.level < 860;
+    });
+
+    // const finalData = {
+    //   labels: filteredData.map(item => new Date(item.timestamp * 1000)),
+    //   datasets: [
+    //     {
+    //       label: "Moisture Level",
+    //       backgroundColor: "rgba(3,176,224,0.4)",
+    //       borderColor: "rgba(3,176,224,1)",
+    //       data: filteredData.map(item => item.level / 100)
+    //     }
+    //   ]
+    // };
+
+    const xsAndYs = filteredData.map(item => ({
+      x: moment(item.timestamp * 1000).format('lll'),
+      y: Number(item.level / 100)
+    }));
+
     const finalData = {
-      labels: response.data.map(item =>
-        moment(item.timestamp * 1000).fromNow()
-      ),
       datasets: [
         {
           label: "Moisture Level",
           backgroundColor: "rgba(3,176,224,0.4)",
           borderColor: "rgba(3,176,224,1)",
-          data: response.data.map(item => item.level / 100)
+          data: xsAndYs
         }
       ]
     };
@@ -51,7 +69,15 @@ class App extends Component {
                 {
                   ticks: {
                     max: 10,
-                    min: 0
+                    min: 5
+                  }
+                }
+              ],
+              xAxes: [
+                {
+                  type: "time",
+                  time: {
+                    unit: "day"
                   }
                 }
               ]
