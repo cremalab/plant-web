@@ -24,7 +24,7 @@ class App extends Component {
     });
 
     const xsAndYs = filteredData.map(item => ({
-      x: moment(item.timestamp * 1000).format('lll'),
+      x: moment.unix(item.timestamp).format('lll'),
       y: Number(item.level / 100)
     }));
 
@@ -54,8 +54,8 @@ class App extends Component {
               yAxes: [
                 {
                   ticks: {
-                    max: 10,
-                    min: 5
+                    max: 9,
+                    min: 7
                   }
                 }
               ],
