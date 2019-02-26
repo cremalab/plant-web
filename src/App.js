@@ -23,18 +23,6 @@ class App extends Component {
       return idx % 1 === 0 && item.level < 860;
     });
 
-    // const finalData = {
-    //   labels: filteredData.map(item => new Date(item.timestamp * 1000)),
-    //   datasets: [
-    //     {
-    //       label: "Moisture Level",
-    //       backgroundColor: "rgba(3,176,224,0.4)",
-    //       borderColor: "rgba(3,176,224,1)",
-    //       data: filteredData.map(item => item.level / 100)
-    //     }
-    //   ]
-    // };
-
     const xsAndYs = filteredData.map(item => ({
       x: moment(item.timestamp * 1000).format('lll'),
       y: Number(item.level / 100)
@@ -50,8 +38,6 @@ class App extends Component {
         }
       ]
     };
-
-    console.log(finalData);
 
     this.setState({
       data: finalData
