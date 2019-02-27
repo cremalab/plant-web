@@ -13,15 +13,13 @@ class App extends Component {
 
   componentDidMount = async () => {
     const response = await axios.get(
-      "https://us-central1-happyplantcloudfunctions.cloudfunctions.net/getMoistureHistory?instanceId=pizero",
+      "https://us-central1-happyplantcloudfunctions.cloudfunctions.net/getMoistureHistory?instanceId=testone",
       {
         crossDomain: true
       }
     );
 
-    let filteredData = response.data.filter((item, idx) => {
-      return idx % 1 === 0 && item.level < 860;
-    });
+    let filteredData = response.data;
 
     const xsAndYs = filteredData.map(item => ({
       x: moment.unix(item.timestamp).format('lll'),
@@ -54,8 +52,8 @@ class App extends Component {
               yAxes: [
                 {
                   ticks: {
-                    max: 9,
-                    min: 7
+                    max: 10,
+                    min: 3
                   }
                 }
               ],
