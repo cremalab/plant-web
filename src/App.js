@@ -13,7 +13,7 @@ class App extends Component {
 
   componentDidMount = async () => {
     const response = await axios.get(
-      "https://us-central1-happyplantcloudfunctions.cloudfunctions.net/getMoistureHistory?instanceId=testone",
+      "https://us-central1-happyplantcloudfunctions.cloudfunctions.net/getMoistureHistory?instanceId=testtwo",
       {
         crossDomain: true
       }
