@@ -101,7 +101,7 @@ class App extends Component {
             <div>{JSON.stringify(this.state.plants)}</div>
           )}
           />
-          <Redirect from="/" to="/graph" />
+          <Redirect from="/" to="/selectplant" />
         </Switch>
       </Router>
     );
