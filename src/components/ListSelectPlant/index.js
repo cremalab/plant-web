@@ -9,7 +9,7 @@ const ListSelectPlant = (props) => {
     {plants.map(plant => (
       <PlantLink
         key={plant.name}
-        to="/plantdetails"
+        to={`${process.env.PUBLIC_URL}/plantdetails`}
         onClick={() => onSelectPlant(plant)}>
         <img src={plant.imgUrl} height="80px" width="100px" alt="Plant" />
         {plant.name}

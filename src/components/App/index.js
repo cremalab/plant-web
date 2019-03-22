@@ -3,12 +3,12 @@ import axios from "axios";
 import plantImg1 from "../../assets/plant1.png";
 import moment from "moment";
 import Graph from "../Graph/";
-import { Switch, Route, Redirect, Router } from 'react-router-dom';
-import RouteSelectPlant from '../RouteSelectPlant';
+import { Switch, Route, Redirect, Router } from "react-router-dom";
+import RouteSelectPlant from "../RouteSelectPlant";
 import { createBrowserHistory } from "history";
 import RoutePlantDetails from "../RoutePlantDetails";
 
-const routerHistory = createBrowserHistory()
+const routerHistory = createBrowserHistory();
 
 class App extends Component {
   constructor(props) {
@@ -16,9 +16,9 @@ class App extends Component {
     this.state = {
       data: {}, // data from sensors
       curPlant: {
-        name: 'Lemon Lime Dracaena',
-        imgUrl: plantImg1,
-      }, // info for "current" plant
+        name: "Lemon Lime Dracaena",
+        imgUrl: plantImg1
+      } // info for "current" plant
     };
   }
 
@@ -75,47 +75,55 @@ class App extends Component {
     this.loadData(evt.target.value);
   };
 
-  handleSelectPlant = (plant) => {
+  handleSelectPlant = plant => {
     this.setState({
       curPlant: plant
-    })
-  }
+    });
+  };
 
-  handleChangePlantDetails = (newCurPlant) => {
+  handleChangePlantDetails = newCurPlant => {
     const { curPlant } = this.state;
     this.setState({
       curPlant: {
         ...curPlant,
-        ...newCurPlant,
+        ...newCurPlant
       }
-    })
-  }
+    });
+  };
 
   render() {
-    console.log(this.state.data)
+    console.log(this.state.data);
     return (
-      <Router history={routerHistory}>
+      <Router history={routerHistory} basename={"/plant-web"}>
         <Switch>
-          <Route path="/graph" render={() => (
-            <Graph
-              handleChangeSelection={this.handleChange}
-              data={this.state.data}
-            />
-          )} />
-          <Route path="/selectplant" render={() => (
-            <RouteSelectPlant
-              onSelectPlant={this.handleSelectPlant}
-            />
-          )}
+          <Route
+            path={`${process.env.PUBLIC_URL}/graph`}
+            render={() => (
+              <Graph
+                handleChangeSelection={this.handleChange}
+                data={this.state.data}
+              />
+            )}
           />
-          <Route path="/plantdetails" render={() => (
-            <RoutePlantDetails
-              curPlant={this.state.curPlant}
-              onChangePlantDetails={this.handleChangePlantDetails}
-            />
-          )}
+          <Route
+            path={`${process.env.PUBLIC_URL}/plantdetails`}
+            render={() => (
+              <RoutePlantDetails
+                curPlant={this.state.curPlant}
+                onChangePlantDetails={this.handleChangePlantDetails}
+              />
+            )}
           />
-          <Redirect from="/" to="/selectplant" />
+          <Route
+            path={`${process.env.PUBLIC_URL}/`}
+            render={() => (
+              <RouteSelectPlant onSelectPlant={this.handleSelectPlant} />
+            )}
+          />
+          <Redirect
+            from={`${process.env.PUBLIC_URL}/selectplant`}
+            to={`${process.env.PUBLIC_URL}/`}
+          />
         </Switch>
       </Router>
     );

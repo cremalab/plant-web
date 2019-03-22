@@ -33,8 +33,8 @@ class RoutePlantDetails extends Component {
 
     return (
       <LayoutOuter>
-        <Link to="/selectplant"><ArrowBackImg src={arrowBackImg} /></Link>
-        <Title>{"Luiza"}</Title>
+        <Link to={`${process.env.PUBLIC_URL}/selectplant`}><ArrowBackImg src={arrowBackImg} /></Link>
+        <Title>Luiza</Title>
         <PlantImg src={curPlant.imgUrl} alt="Plant" />
         <PlantName>{curPlant.name}</PlantName>
         <DetailLight>{"Acquisition Date: November 2018"}</DetailLight>
