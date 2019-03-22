@@ -1,13 +1,17 @@
 {
-  "main.css": "/plant-web/static/css/main.351477f1.chunk.css",
-  "main.js": "/plant-web/static/js/main.e4795e46.chunk.js",
-  "main.js.map": "/plant-web/static/js/main.e4795e46.chunk.js.map",
+  "main.css": "/plant-web/static/css/main.53104d8e.chunk.css",
+  "main.js": "/plant-web/static/js/main.3fbf6dc1.chunk.js",
+  "main.js.map": "/plant-web/static/js/main.3fbf6dc1.chunk.js.map",
   "runtime~main.js": "/plant-web/static/js/runtime~main.3d158d20.js",
   "runtime~main.js.map": "/plant-web/static/js/runtime~main.3d158d20.js.map",
-  "static/js/2.5827a6a9.chunk.js": "/plant-web/static/js/2.5827a6a9.chunk.js",
-  "static/js/2.5827a6a9.chunk.js.map": "/plant-web/static/js/2.5827a6a9.chunk.js.map",
+  "static/js/2.07ad953e.chunk.js": "/plant-web/static/js/2.07ad953e.chunk.js",
+  "static/js/2.07ad953e.chunk.js.map": "/plant-web/static/js/2.07ad953e.chunk.js.map",
   "index.html": "/plant-web/index.html",
-  "precache-manifest.ccfe2e890d21856a0716b0f32e6ecff2.js": "/plant-web/precache-manifest.ccfe2e890d21856a0716b0f32e6ecff2.js",
+  "precache-manifest.797ccd3f28725f719269c3912161be27.js": "/plant-web/precache-manifest.797ccd3f28725f719269c3912161be27.js",
   "service-worker.js": "/plant-web/service-worker.js",
-  "static/css/main.351477f1.chunk.css.map": "/plant-web/static/css/main.351477f1.chunk.css.map"
+  "static/css/main.53104d8e.chunk.css.map": "/plant-web/static/css/main.53104d8e.chunk.css.map",
+  "static/media/plant1.png": "/plant-web/static/media/plant1.e40c9702.png",
+  "static/media/plant2.png": "/plant-web/static/media/plant2.f001b3bc.png",
+  "static/media/plant3.png": "/plant-web/static/media/plant3.73788fd5.png",
+  "static/media/plant4.png": "/plant-web/static/media/plant4.39851ff5.png"
 }
