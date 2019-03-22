@@ -10,7 +10,7 @@ const ListSelectPlant = (props) => {
       <PlantLink
         key={plant.name}
         to="/plantdetails"
-        onClick={() => onSelectPlant(plant.name)}>
+        onClick={() => onSelectPlant(plant)}>
         <img src={plant.imgUrl} height="80px" width="100px" alt="Plant" />
         {plant.name}
       </PlantLink>
@@ -40,6 +40,7 @@ const PlantLink = styled(Link)`
 const Outer = styled.div`
   display: flex;
   flex-flow: row wrap;
+  max-width: 553px;
 `;
 ListSelectPlant.propTypes = {
   onSelectPlant: PropTypes.func,

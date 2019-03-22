@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import axios from "axios";
+import plantImg1 from "../../assets/plant1.png";
 import moment from "moment";
 import Graph from "../Graph/";
 import { Switch, Route, Redirect, Router } from 'react-router-dom';
 import RouteSelectPlant from '../RouteSelectPlant';
 import { createBrowserHistory } from "history";
+import RoutePlantDetails from "../RoutePlantDetails";
 
 const routerHistory = createBrowserHistory()
 
@@ -12,8 +14,11 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: {},
-      plants: {},
+      data: {}, // data from sensors
+      curPlant: {
+        name: 'Lemon Lime Dracaena',
+        imgUrl: plantImg1,
+      }, // info for "current" plant
     };
   }
 
@@ -70,18 +75,24 @@ class App extends Component {
     this.loadData(evt.target.value);
   };
 
-  handleSelectPlant = (plantName) => {
-    const { plants } = this.state;
-    if (plants[plantName] === undefined) {
-      this.setState({
-        plants: {
-          ...plants,
-          [plantName]: {}
-        }
-      })
-    }
+  handleSelectPlant = (plant) => {
+    this.setState({
+      curPlant: plant
+    })
   }
+
+  handleChangePlantDetails = (newCurPlant) => {
+    const { curPlant } = this.state;
+    this.setState({
+      curPlant: {
+        ...curPlant,
+        ...newCurPlant,
+      }
+    })
+  }
+
   render() {
+    console.log(this.state.data)
     return (
       <Router history={routerHistory}>
         <Switch>
@@ -98,7 +109,10 @@ class App extends Component {
           )}
           />
           <Route path="/plantdetails" render={() => (
-            <div>{JSON.stringify(this.state.plants)}</div>
+            <RoutePlantDetails
+              curPlant={this.state.curPlant}
+              onChangePlantDetails={this.handleChangePlantDetails}
+            />
           )}
           />
           <Redirect from="/" to="/selectplant" />

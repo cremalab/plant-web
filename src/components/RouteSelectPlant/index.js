@@ -1,20 +1,20 @@
 import React, { Component } from "react";
-import Title from '../Title';
-import styled from 'styled-components';
+import { Title } from '../Text';
 import ListSelectPlant from "../ListSelectPlant";
 import plantImg1 from "../../assets/plant1.png";
 import plantImg2 from "../../assets/plant2.png";
 import plantImg3 from "../../assets/plant3.png";
 import plantImg4 from "../../assets/plant4.png";
 import PropTypes from 'prop-types';
+import LayoutOuter from "../LayoutOuter";
 
 class RouteSelectPlant extends Component {
   render() {
     return (
-      <Outer>
+      <LayoutOuter>
         <Title>{"Select your plant type"}</Title>
         <ListSelectPlant
-        onSelectPlant={this.props.onSelectPlant}
+          onSelectPlant={this.props.onSelectPlant}
           plants={[
             {
               name: 'Lemon Lime Dracaena',
@@ -66,20 +66,10 @@ class RouteSelectPlant extends Component {
             },
           ]}
         />
-      </Outer>
+      </LayoutOuter>
     );
   }
 }
-
-const Outer = styled.div`
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  padding: 60px;
-`;
 
 RouteSelectPlant.props = {
   onSelectPlant: PropTypes.func,
