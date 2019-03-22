@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/plant-web/static/media/plant3.73788fd5.png"
   },
   {
-    "revision": "41f49c6acc600a2999d5",
+    "revision": "6c565f57345600f0ab15",
     "url": "/plant-web/static/css/main.351477f1.chunk.css"
   },
   {
@@ -24,8 +24,8 @@ self.__precacheManifest = [
     "url": "/plant-web/static/media/plant2.f001b3bc.png"
   },
   {
-    "revision": "41f49c6acc600a2999d5",
-    "url": "/plant-web/static/js/main.41f49c6a.chunk.js"
+    "revision": "6c565f57345600f0ab15",
+    "url": "/plant-web/static/js/main.6c565f57.chunk.js"
   },
   {
     "revision": "39851ff549c287583017f5f05f0228ae",
@@ -44,7 +44,7 @@ self.__precacheManifest = [
     "url": "/plant-web/static/media/sunny.7125844e.svg"
   },
   {
-    "revision": "7338a359bf488dc5ef42797d8ffff547",
+    "revision": "f49cc97c7bf6909f2e90c0721d24d9fd",
     "url": "/plant-web/index.html"
   }
 ];
