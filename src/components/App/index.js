@@ -8,7 +8,7 @@ import { createBrowserHistory } from "history";
 
 const routerHistory = createBrowserHistory()
 
-const urlPrefix = "/plant-web";
+const urlPrefix = '';
 class App extends Component {
   constructor(props) {
     super(props);
