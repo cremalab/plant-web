@@ -32,6 +32,38 @@ class RouteSelectPlant extends Component {
               name: 'Grandpappy\'s Wort (Palmatum)',
               imgUrl: plantImg4,
             },
+            {
+              name: 'Coreopsis Anachronosis',
+              imgUrl: plantImg1,
+            },
+            {
+              name: 'Dutchmen\'s Breeches',
+              imgUrl: plantImg2,
+            },
+            {
+              name: 'Red-Necked Foxworthy',
+              imgUrl: plantImg3,
+            },
+            {
+              name: 'Bachelor Buttons, Perrenial',
+              imgUrl: plantImg4,
+            },
+            {
+              name: 'Boston "Strangler" Ivy',
+              imgUrl: plantImg1,
+            },
+            {
+              name: 'Ambiguous Gluteus Maximus',
+              imgUrl: plantImg2,
+            },
+            {
+              name: 'Flowers?',
+              imgUrl: plantImg3,
+            },
+            {
+              name: 'Helvetica Neue',
+              imgUrl: plantImg4,
+            },
           ]}
         />
       </Outer>
