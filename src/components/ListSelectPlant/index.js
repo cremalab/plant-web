@@ -41,7 +41,9 @@ const Outer = styled.div`
   display: flex;
   flex-flow: row wrap;
   max-width: 553px;
+  justify-content: center;
 `;
+
 ListSelectPlant.propTypes = {
   onSelectPlant: PropTypes.func,
   plants: PropTypes.arrayOf(PropTypes.objectOf({
