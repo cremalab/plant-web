@@ -66,6 +66,8 @@ RoutePlantDetails.props = {
 const PlantImg = styled.img`
   height: 60vw;
   width: 60vw;
+  max-height: 440px;
+  max-width: 440px;
 `;
 const PlantName = styled.h3`
   font-size: 23px;

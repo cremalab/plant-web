@@ -45,7 +45,7 @@ const GaugeOuter = styled.div`
   width: 100%;
   margin: 20px 0;
   height: 12px;
-  background-color: #bbb;
+  background-color: #DDD79B;
   border-radius: 5px;
   overflow: hidden;
   position: relative;
