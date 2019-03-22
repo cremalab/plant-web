@@ -8,6 +8,7 @@ import { createBrowserHistory } from "history";
 
 const routerHistory = createBrowserHistory()
 
+const urlPrefix = "/plant-web";
 class App extends Component {
   constructor(props) {
     super(props);
@@ -85,23 +86,23 @@ class App extends Component {
     return (
       <Router history={routerHistory}>
         <Switch>
-          <Route path="/graph" render={() => (
+          <Route path={`${urlPrefix}/graph`} render={() => (
             <Graph
               handleChangeSelection={this.handleChange}
               data={this.state.data}
             />
           )} />
-          <Route path="/selectplant" render={() => (
+          <Route path={`${urlPrefix}/selectplant`} render={() => (
             <RouteSelectPlant
               onSelectPlant={this.handleSelectPlant}
             />
           )}
           />
-          <Route path="/plantdetails" render={() => (
+          <Route path={`${urlPrefix}/plantdetails`} render={() => (
             <div>{JSON.stringify(this.state.plants)}</div>
           )}
           />
-          <Redirect from="/" to="/selectplant" />
+          <Redirect from="/" to={`${urlPrefix}/selectplant`} />
         </Switch>
       </Router>
     );
