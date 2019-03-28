@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "73788fd5202dd94d99dcfb9fa2e4b2b8",
-    "url": "/plant-web/static/media/plant3.73788fd5.png"
+    "revision": "39851ff549c287583017f5f05f0228ae",
+    "url": "/plant-web/static/media/plant4.39851ff5.png"
   },
   {
-    "revision": "e8710b09f69932e7fa50",
+    "revision": "2d41612394fb9b585cb3",
     "url": "/plant-web/static/css/main.351477f1.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = [
     "url": "/plant-web/static/js/runtime~main.3d158d20.js"
   },
   {
-    "revision": "83821b5dc00d2660c033",
-    "url": "/plant-web/static/js/2.83821b5d.chunk.js"
+    "revision": "b5b46711ec86325b43f1",
+    "url": "/plant-web/static/js/2.b5b46711.chunk.js"
   },
   {
     "revision": "e40c970297840b612b8720e13f4ee7f1",
@@ -24,12 +24,12 @@ self.__precacheManifest = [
     "url": "/plant-web/static/media/plant2.f001b3bc.png"
   },
   {
-    "revision": "e8710b09f69932e7fa50",
-    "url": "/plant-web/static/js/main.e8710b09.chunk.js"
+    "revision": "73788fd5202dd94d99dcfb9fa2e4b2b8",
+    "url": "/plant-web/static/media/plant3.73788fd5.png"
   },
   {
-    "revision": "39851ff549c287583017f5f05f0228ae",
-    "url": "/plant-web/static/media/plant4.39851ff5.png"
+    "revision": "2d41612394fb9b585cb3",
+    "url": "/plant-web/static/js/main.2d416123.chunk.js"
   },
   {
     "revision": "2b8eed5dc159f9e4ae762173d5ee0f7a",
@@ -44,7 +44,15 @@ self.__precacheManifest = [
     "url": "/plant-web/static/media/sunny.7125844e.svg"
   },
   {
-    "revision": "1ba8663c46ede18b1f133696e048da3e",
+    "revision": "8e962174fcf6e22afc68ccc3e68e1b16",
+    "url": "/plant-web/static/media/background.8e962174.png"
+  },
+  {
+    "revision": "fbe2c9788dbd7d3923da5c9fc3f4d6d0",
+    "url": "/plant-web/static/media/happy-plant.fbe2c978.svg"
+  },
+  {
+    "revision": "bfcbe591e62a355be4bff8428dfde7ce",
     "url": "/plant-web/index.html"
   }
 ];
