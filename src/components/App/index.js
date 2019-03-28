@@ -7,6 +7,7 @@ import { Switch, Route, Redirect, Router } from "react-router-dom";
 import RouteSelectPlant from "../RouteSelectPlant";
 import { createBrowserHistory } from "history";
 import RoutePlantDetails from "../RoutePlantDetails";
+import SplashScreen from "../SplashScreen";
 
 const routerHistory = createBrowserHistory();
 
@@ -18,7 +19,8 @@ class App extends Component {
       curPlant: {
         name: "Lemon Lime Dracaena",
         imgUrl: plantImg1
-      } // info for "current" plant
+      }, // info for "current" plant
+      showSplashScreen: true
     };
   }
 
@@ -92,7 +94,11 @@ class App extends Component {
   };
 
   render() {
-    console.log(this.state.data);
+    if (this.state.showSplashScreen) {
+      setTimeout(() => this.setState({ showSplashScreen: false }), 2000);
+      return <SplashScreen />;
+    }
+
     return (
       <Router history={routerHistory} basename={"/plant-web"}>
         <Switch>
@@ -116,6 +122,7 @@ class App extends Component {
           />
           <Route
             path={`${process.env.PUBLIC_URL}/`}
+            exact
             render={() => (
               <RouteSelectPlant onSelectPlant={this.handleSelectPlant} />
             )}

@@ -43,8 +43,8 @@ IdealConditions.props = {
 }
 
 const Outer = styled.div`
-  width: 90%;
-  margin: 20px 5%;
+  width: 100%;
+  margin: 20px 5px;
   max-width: 600px;
 `;
 
@@ -57,14 +57,14 @@ const Conditions = styled.div`
 const Condition = styled.div`
   max-width: 200px;
   max-height: 200px;
-  width: 29vw;
-  height: 29vw;
-  border: 1.5px solid #aaa;
+  width: 30vw;
+  height: 30vw;
+  border: 1px solid #aaa;
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: space-around;
-  padding-bottom: 5%;
+  padding-bottom: 5px;
   box-sizing: border-box;
 
   &:nth-child(2) {
@@ -74,7 +74,7 @@ const Condition = styled.div`
 `;
 
 const ConditionName = styled.h4`
-  font-size: 12px;
+  font-size: 0.9em;
   color: #888;
   text-align: center;
 `;

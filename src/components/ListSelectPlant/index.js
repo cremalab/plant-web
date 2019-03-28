@@ -11,7 +11,7 @@ const ListSelectPlant = (props) => {
         key={plant.name}
         to={`${process.env.PUBLIC_URL}/plantdetails`}
         onClick={() => onSelectPlant(plant)}>
-        <img src={plant.imgUrl} height="80px" width="100px" alt="Plant" />
+        <img src={plant.imgUrl} height="75px" width="75px" style={{margin: '10px'}} alt={plant.name} />
         {plant.name}
       </PlantLink>
     ))}
@@ -22,13 +22,14 @@ const PlantLink = styled(Link)`
   text-decoration: none;
   color: #000;
   border: 2px solid #d0e647;
-  border-radius: 10px;
-  margin: 15px;
-  height: 160px;
-  width: 150px;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 5px;
+  height: auto;
+  width: 140px;
   display: flex;
   justify-content: center;
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 500;
   text-align: center;
   display: flex;
@@ -46,7 +47,7 @@ const Outer = styled.div`
 
 ListSelectPlant.propTypes = {
   onSelectPlant: PropTypes.func,
-  plants: PropTypes.arrayOf(PropTypes.objectOf({
+  plants: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string,
     imgUrl: PropTypes.string,
   }))

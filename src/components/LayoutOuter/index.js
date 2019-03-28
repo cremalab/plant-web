@@ -7,8 +7,9 @@ const LayoutOuter = styled.div`
   align-items: center;
   width: 100vw;
   height: 100vh;
-  padding: 20px;
+  padding: 15px;
   box-sizing: border-box;
+  background-color: white;
 `;
 
 export default LayoutOuter;

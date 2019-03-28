@@ -1,26 +1,26 @@
 import React, { Component } from "react";
-import { Title, DetailLight } from '../Text';
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
+import { Title, DetailLight } from "../Text";
+import styled from "styled-components";
+import PropTypes from "prop-types";
 import LayoutOuter from "../LayoutOuter";
 import OverviewLevels from "../OverviewLevels";
 import IdealConditions from "../IdealConditions";
 import arrowBackImg from "../../assets/arrowBack.png";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const moistureHelpers = [
-  'Needs water badly',
-  'Needs water',
-  'Will need water',
-  'Feelin\' good',
-  'Very moist',
-]
+  "Needs water badly",
+  "Needs water",
+  "Will need water",
+  "Feelin' good",
+  "Very moist"
+];
 const temperatureHelpers = [
-  'Needs heat badly',
-  'A little chilly',
-  'Feelin\' good',
-  'A bit too hot',
-]
+  "Needs heat badly",
+  "A little chilly",
+  "Feelin' good",
+  "A bit too hot"
+];
 
 class RoutePlantDetails extends Component {
   render() {
@@ -28,12 +28,21 @@ class RoutePlantDetails extends Component {
 
     const moisturePercent = Math.random();
     const temperaturePercent = Math.random();
-    const moistureHelper = moistureHelpers[Math.floor(moisturePercent * moistureHelpers.length)];
-    const temperatureHelper = temperatureHelpers[Math.floor(temperaturePercent * temperatureHelpers.length)]
+    const moistureHelper =
+      moistureHelpers[Math.floor(moisturePercent * moistureHelpers.length)];
+    const temperatureHelper =
+      temperatureHelpers[
+        Math.floor(temperaturePercent * temperatureHelpers.length)
+      ];
 
     return (
       <LayoutOuter>
-        <Link to={`${process.env.PUBLIC_URL}/selectplant`}><ArrowBackImg src={arrowBackImg} /></Link>
+        <Link
+          style={{ alignSelf: "flex-start", position: "relative" }}
+          to={`${process.env.PUBLIC_URL}/selectplant`}
+        >
+          <ArrowBackImg src={arrowBackImg} />
+        </Link>
         <Title>Luiza</Title>
         <PlantImg src={curPlant.imgUrl} alt="Plant" />
         <PlantName>{curPlant.name}</PlantName>
@@ -48,11 +57,13 @@ class RoutePlantDetails extends Component {
           percent={temperaturePercent * 100}
           helperText={temperatureHelper}
         />
-        <IdealConditions conditions={{
-          humidity: 'Up to 7',
-          sunlight: 'Indirect sunlight',
-          water: 'Every 4 days',
-        }} />
+        <IdealConditions
+          conditions={{
+            humidity: "Up to 7",
+            sunlight: "Indirect sunlight",
+            water: "Every 4 days"
+          }}
+        />
       </LayoutOuter>
     );
   }
@@ -60,8 +71,8 @@ class RoutePlantDetails extends Component {
 
 RoutePlantDetails.props = {
   onChangePlantDetails: PropTypes.func,
-  curPlant: PropTypes.object,
-}
+  curPlant: PropTypes.object
+};
 
 const PlantImg = styled.img`
   height: 60vw;
@@ -71,7 +82,7 @@ const PlantImg = styled.img`
 `;
 const PlantName = styled.h3`
   font-size: 23px;
-  color: #004E17;
+  color: #004e17;
   text-align: center;
   margin: 10px;
 `;
@@ -80,8 +91,8 @@ const ArrowBackImg = styled.img`
   height: 30px;
   width: 30px;
   position: absolute;
-  top: 20px;
-  left: 10%;
+  top: 10px;
+  left: 0px;
 `;
 
 export default RoutePlantDetails;

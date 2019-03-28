@@ -11,7 +11,7 @@ export const SmallTitle = styled.div`
   text-align: left;
   font-size: 12px;
   color: #555;
-  margin: 5px;
+  margin: 0px 5px;
 `;
 
 
